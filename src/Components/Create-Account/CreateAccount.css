@@ -12,31 +12,48 @@
 
 }
 #create-container > #box {
-    
     width: 550px;
     height: 600px;
     margin: 20px;
-
-
+    /* display: flex; */
+    position: relative;
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(5px);
     border-radius:20px;
 
+}
+
+#box > #box1, #box2 {
+    width: 100%;
+    height: 100%;
+   
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+    position: absolute;
 }
-#box > :first-child{
+
+#box > #box1 {
+   z-index: 2;
+}
+#box > #box2 {
+    z-index: 3; 
+} 
+
+
+
+#box > #box1 > :first-child{
     font-size: 25px;
     color: white
 }
-#box > :nth-child(2) {
+#box > #box1 > :nth-child(2) {
     width: 80%;
 
 }
-#box #form-container div {
+#box > #box1 #form-container div {
     margin-top: 25px;
     color: rgba(255, 255, 255, 0.5);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -44,7 +61,7 @@
     font-weight: bold;  
 }
 
-#box #form-container > div input {
+#box > #box1 #form-container > div input {
     margin-top: 5px;
     width: 100%;
     height: 35px;
@@ -56,11 +73,11 @@
 }
 
 /* BUTTON DESIGN */
-#box #form-container > :last-child {
+#box > #box1 #form-container > :last-child {
 
     text-align: center;
 }
-#box button {
+#box > #box1 button {
     width: 90px;
     height: 40px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
